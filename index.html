@@ -6,14 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joki Tugas Web</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Link AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <style>
     * {
         scroll-behavior: smooth;
     }
 
+    body {
+        background: linear-gradient(45deg, #4facfe, #00f2fe);
+        animation: gradientAnimation 8s infinite alternate;
+    }
+
+    @keyframes gradientAnimation {
+        0% {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+        }
+
+        50% {
+            background: linear-gradient(45deg, #fc466b, #3f5efb);
+        }
+
+        100% {
+            background: linear-gradient(45deg, #43cea2, #185a9d);
+        }
+    }
+
     #sidebar {
         z-index: 50;
+        background-color: rgba(255, 255, 255, 0.9);
+        /* Transparansi sidebar */
     }
 
     #hamburger-button {
@@ -22,75 +45,57 @@
         right: 20px;
         z-index: 1000;
     }
+
+    section.bg-blue-500 {
+        background: rgba(70, 130, 180, 0.8);
+        /* Biru dengan transparansi untuk Hero section */
+    }
+
+    .btn-animated {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .btn-animated:hover {
+        transform: scale(1.1);
+    }
 </style>
 
-<body class="bg-gray-100">
+<body>
 
-    <!-- Sidebar, hidden by default -->
-    <div id="sidebar"
-        class="fixed right-0 top-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform">
-        <div class="p-4">
-            <ul>
-                <li><a onclick="toggleCloseSidebar()" class="block close py-2 text-gray-700 hover:text-blue-500">X</a>
-                </li>
-                <li><a href="./index.html" onclick="toggleCloseSidebar()"
-                        class="block close py-2 text-gray-700 hover:text-blue-500">Home</a>
-                </li>
-                <li><a onclick="toggleCloseSidebar()" href="#services"
-                        class="block close py-2 text-gray-700 hover:text-blue-500">Layanan</a></li>
-                <li><a onclick="toggleCloseSidebar()" href="#testimonials"
-                        class="block close py-2 text-gray-700 hover:text-blue-500">Testimoni</a>
-                </li>
-            </ul>
-            <br>
-            <br>
-            <footer class="bg-blue-500 rounded-md text-white py-2">
-                <div class="container mx-auto text-center">
-                    <p>&copy; 2024 JokiWeb</p>
-                </div>
-            </footer>
-
-        </div>
-    </div>
-
-    <!-- Hero Section dengan tombol hamburger di kanan atas -->
-    <section class="bg-blue-500 text-white py-20 h-screen flex flex-col justify-center items-center relative">
-        <div class="absolute top-4 right-4">
-            <button id="hamburger-button" class="bg-white text-blue-500 px-4 py-2 rounded focus:outline-none"
-                onclick="toggleSidebar()">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
-
-        </div>
+    <!-- Hero Section -->
+    <section class="text-white py-20 h-screen flex flex-col justify-center items-center relative">
         <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold mb-4">Selamat Datang Di Joki Tugas Web</h1>
-            <p class="text-lg mb-8">Kami siap membantu Anda menyelesaikan tugas pembuatan website dengan cepat dan
-                profesional.</p>
+            <h1 class="text-4xl font-bold mb-4" data-aos="fade-up" data-aos-duration="1200"
+                data-aos-easing="ease-in-out">Selamat Datang Di Joki Tugas Web</h1>
+            <p class="text-lg mb-8" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200"
+                data-aos-easing="ease-in-out">Kami siap membantu Anda menyelesaikan tugas pembuatan website dengan cepat
+                dan profesional.</p>
             <a href="https://wa.me/6285825163362?text=Saya Mau Joki Tugas"
-                class="bg-white text-blue-500 px-8 py-3 font-semibold rounded">Hubungi Kami</a>
+                class="bg-white text-blue-500 px-8 py-3 font-semibold rounded" data-aos="fade-up" data-aos-delay="500"
+                data-aos-duration="1200" data-aos-easing="ease-in-out">Hubungi Kami</a>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section style="align-items: center; align-content: center;" id="services" class="py-16 h-screen">
-        <div style="align-items: center; align-content:center; height:100vh;" class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">Layanan Kami</h2>
+    <section id="services" class="py-16 h-screen flex justify-center items-center">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8" data-aos="zoom-in" data-aos-duration="1000"
+                data-aos-easing="ease-out-cubic">Layanan Kami</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded shadow-md">
+                <div class="bg-white p-6 rounded shadow-md" data-aos="fade-right" data-aos-offset="200"
+                    data-aos-duration="1200">
                     <h3 class="text-xl font-semibold mb-4">Website Portofolio</h3>
                     <p class="text-gray-700">Bantu membuat website portofolio untuk keperluan pribadi atau profesional.
                     </p>
                 </div>
-                <div class="bg-white p-6 rounded shadow-md">
+                <div class="bg-white p-6 rounded shadow-md" data-aos="fade-up" data-aos-offset="200"
+                    data-aos-delay="300" data-aos-duration="1200">
                     <h3 class="text-xl font-semibold mb-4">Tugas Web Sekolah/Kuliah</h3>
                     <p class="text-gray-700">Membantu menyelesaikan tugas web untuk sekolah atau kuliah dengan teknologi
                         terkini.</p>
                 </div>
-                <div class="bg-white p-6 rounded shadow-md">
+                <div class="bg-white p-6 rounded shadow-md" data-aos="fade-left" data-aos-offset="200"
+                    data-aos-delay="600" data-aos-duration="1200">
                     <h3 class="text-xl font-semibold mb-4">Website Bisnis Sederhana</h3>
                     <p class="text-gray-700">Menyediakan layanan pembuatan website sederhana untuk keperluan bisnis
                         kecil.</p>
@@ -100,20 +105,24 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section style="align-items: center; align-content: center;" id="testimonials" class="py-16 bg-blue-500 h-screen">
-        <div style="align-items: center; align-content:center; height:100vh;" class="container mx-auto text-center">
-            <h2 class="text-3xl text-white font-bold mb-8">Testimoni Pelanggan</h2>
+    <section id="testimonials" class="py-16 bg-blue-500 h-screen flex justify-center items-center">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl text-white font-bold mb-8" data-aos="zoom-in" data-aos-duration="1000"
+                data-aos-easing="ease-out-cubic">Testimoni Pelanggan</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded shadow-md">
+                <div class="bg-white p-6 rounded shadow-md" data-aos="flip-left" data-aos-duration="1200"
+                    data-aos-easing="ease-in-out" data-aos-offset="250">
                     <p class="text-gray-700">"Website untuk tugas kuliah saya selesai dengan cepat dan sangat bagus!"
                     </p>
                     <p class="mt-4 font-semibold">- Maya, Mahasiswa</p>
                 </div>
-                <div class="bg-white p-6 rounded shadow-md">
+                <div class="bg-white p-6 rounded shadow-md" data-aos="flip-left" data-aos-delay="300"
+                    data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-offset="250">
                     <p class="text-gray-700">"Pelayanan ramah dan hasil pekerjaan memuaskan. Terima kasih!"</p>
                     <p class="mt-4 font-semibold">- Rizky, Pelajar SMA</p>
                 </div>
-                <div class="bg-white p-6 rounded shadow-md">
+                <div class="bg-white p-6 rounded shadow-md" data-aos="flip-left" data-aos-delay="600"
+                    data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-offset="250">
                     <p class="text-gray-700">"Sangat membantu untuk deadline tugas yang ketat. Hasil website keren!"</p>
                     <p class="mt-4 font-semibold">- Dinda, Mahasiswa</p>
                 </div>
@@ -121,20 +130,13 @@
         </div>
     </section>
 
+    <!-- Script AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('translate-x-full');
-        }
-
-        function toggleCloseSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.add('translate-x-full'); 
-        }
+        AOS.init({
+            duration: 1000, // Durasi default animasi
+            easing: 'ease-in-out', // Easing default animasi
+            once: true, // Hanya animasi sekali saat pertama kali di-scroll
+        });
     </script>
-
-
-
 </body>
-
-</html>
