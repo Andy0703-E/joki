@@ -96,11 +96,15 @@
 
     <!-- Sidebar -->
     <button id="hamburger-button" onclick="toggleSidebar()">☰</button>
-    <nav id="sidebar">
+    <br>
+    <nav id="sidebar" class="ml-auto">
         <ul>
-            <li><a href="#hero">Home</a></li>
+            <br>
+            <li><a href="#" class="pointer" onclick="toggleSidebar()">X</a></li>
+            <li><a href=" #hero">Home</a></li>
             <li><a href="#services">Layanan Kami</a></li>
             <li><a href="#testimonials">Testimoni</a></li>
+            <li><a href="#technologies">Teknologi</a></li>
             <li><a href="https://wa.me/6285825163362?text=Saya Mau Joki Tugas">Hubungi Kami</a></li>
         </ul>
     </nav>
@@ -108,9 +112,13 @@
     <!-- Hero Section -->
     <section id="hero" class="text-white py-20 h-screen flex flex-col justify-center items-center relative">
         <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold mb-4" data-aos="fade-up" data-aos-duration="1200">Selamat Datang Di Joki Tugas Web</h1>
-            <p class="text-lg mb-8" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">Kami siap membantu Anda menyelesaikan tugas pembuatan website dengan cepat dan profesional.</p>
-            <a href="https://wa.me/6285825163362?text=Saya Mau Joki Tugas" class="bg-white text-blue-500 px-8 py-3 font-semibold rounded" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1200">Hubungi Kami</a>
+            <h1 class="text-4xl font-bold mb-4" data-aos="fade-up" data-aos-duration="1200">Selamat Datang Di Joki Tugas
+                Web</h1>
+            <p class="text-lg mb-8" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">Kami siap membantu
+                Anda menyelesaikan tugas pembuatan website dengan cepat dan profesional.</p>
+            <a href="https://wa.me/6285825163362?text=Saya Mau Joki Tugas"
+                class="bg-white text-blue-500 px-8 py-3 font-semibold rounded" data-aos="fade-up" data-aos-delay="500"
+                data-aos-duration="1200">Hubungi Kami</a>
         </div>
     </section>
 
@@ -121,15 +129,20 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded shadow-md service-card" data-aos="fade-right" data-aos-duration="1200">
                     <h3 class="text-xl font-semibold mb-4">Website Portofolio</h3>
-                    <p class="text-gray-700">Bantu membuat website portofolio untuk keperluan pribadi atau profesional.</p>
+                    <p class="text-gray-700">Bantu membuat website portofolio untuk keperluan pribadi atau profesional.
+                    </p>
                 </div>
-                <div class="bg-white p-6 rounded shadow-md service-card" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+                <div class="bg-white p-6 rounded shadow-md service-card" data-aos="fade-up" data-aos-duration="1200"
+                    data-aos-delay="300">
                     <h3 class="text-xl font-semibold mb-4">Tugas Web Sekolah/Kuliah</h3>
-                    <p class="text-gray-700">Membantu menyelesaikan tugas web untuk sekolah atau kuliah dengan teknologi terkini.</p>
+                    <p class="text-gray-700">Membantu menyelesaikan tugas web untuk sekolah atau kuliah dengan teknologi
+                        terkini.</p>
                 </div>
-                <div class="bg-white p-6 rounded shadow-md service-card" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="600">
+                <div class="bg-white p-6 rounded shadow-md service-card" data-aos="fade-left" data-aos-duration="1200"
+                    data-aos-delay="600">
                     <h3 class="text-xl font-semibold mb-4">Website Bisnis Sederhana</h3>
-                    <p class="text-gray-700">Menyediakan layanan pembuatan website sederhana untuk keperluan bisnis kecil.</p>
+                    <p class="text-gray-700">Menyediakan layanan pembuatan website sederhana untuk keperluan bisnis
+                        kecil.</p>
                 </div>
             </div>
         </div>
@@ -138,23 +151,97 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-16 bg-blue-500 h-screen flex justify-center items-center">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl text-white font-bold mb-8" data-aos="zoom-in" data-aos-duration="1000">Testimoni Pelanggan</h2>
+            <h2 class="text-3xl text-white font-bold mb-8" data-aos="zoom-in" data-aos-duration="1000">Testimoni
+                Pelanggan</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded shadow-md" data-aos="flip-left" data-aos-duration="1200">
-                    <p class="text-gray-700">"Website untuk tugas kuliah saya selesai dengan cepat dan sangat bagus!"</p>
+                    <p class="text-gray-700">"Website untuk tugas kuliah saya selesai dengan cepat dan sangat bagus!"
+                    </p>
                     <p class="mt-4 font-semibold">- Maya, Mahasiswa</p>
                 </div>
-                <div class="bg-white p-6 rounded shadow-md" data-aos="flip-left" data-aos-delay="300" data-aos-duration="1200">
+                <div class="bg-white p-6 rounded shadow-md" data-aos="flip-left" data-aos-delay="300"
+                    data-aos-duration="1200">
                     <p class="text-gray-700">"Pelayanan ramah dan hasil pekerjaan memuaskan. Terima kasih!"</p>
                     <p class="mt-4 font-semibold">- Rizky, Pelajar SMA</p>
                 </div>
-                <div class="bg-white p-6 rounded shadow-md" data-aos="flip-left" data-aos-delay="600" data-aos-duration="1200">
+                <div class="bg-white p-6 rounded shadow-md" data-aos="flip-left" data-aos-delay="600"
+                    data-aos-duration="1200">
                     <p class="text-gray-700">"Sangat membantu untuk deadline tugas yang ketat. Hasil website keren!"</p>
                     <p class="mt-4 font-semibold">- Dinda, Mahasiswa</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="py-16 h-screen flex justify-center items-center bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8" data-aos="zoom-in" data-aos-duration="1000">Teknologi yang Kami Gunakan
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded shadow-md" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+                        alt="HTML5" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">HTML5</h3>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+                        alt="Tailwind CSS" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Tailwind CSS</h3>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Javascript-shield.svg"
+                        alt="JavaScript" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">JavaScript</h3>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="600">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP"
+                        class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">PHP</h3>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="800">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js"
+                        class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Node.js</h3>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="1000">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Next.js"
+                        class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Next.js</h3>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="1200">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React.js"
+                        class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">React.js</h3>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="1400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" alt="Vite"
+                        class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Vite</h3>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="1600">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap 5"
+                        class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Bootstrap 5</h3>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="1800">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg" alt="MySQL"
+                        class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">MySQL</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Back to Top Button -->
     <button id="backToTop" onclick="scrollToTop()">↑</button>
@@ -184,4 +271,5 @@
         };
     </script>
 </body>
+
 </html>
