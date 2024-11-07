@@ -15,7 +15,7 @@
     }
 
     body {
-        background: linear-gradient(45deg, #4facfe, #00f2fe);
+        background: #00f2fe;
     }
 
     #sidebar {
@@ -36,6 +36,8 @@
     }
 
     #hamburger-button {
+        color: #646464;
+        font-size: large;
         position: fixed;
         top: 20px;
         left: 20px;
@@ -43,7 +45,7 @@
     }
 
     section.bg-blue-500 {
-        background: rgba(70, 130, 180, 0.8);
+        background: #00f2fe;
     }
 
     .btn-animated {
@@ -71,7 +73,7 @@
 
     #scrollIndicator div {
         height: 5px;
-        background: #00f2fe;
+        background: #ff0000;
         width: 0%;
     }
 
@@ -95,12 +97,12 @@
     </div>
 
     <!-- Sidebar -->
-    <button id="hamburger-button" onclick="toggleSidebar()">☰</button>
+    <button id="hamburger-button" class="font-bold" onclick="toggleSidebar()">☰</button>
     <br>
     <nav id="sidebar" class="ml-auto">
         <ul>
             <br>
-            <li><a href="#" class="pointer" onclick="toggleSidebar()">X</a></li>
+            <br>
             <li><a href=" #hero">Home</a></li>
             <li><a href="#services">Layanan Kami</a></li>
             <li><a href="#testimonials">Testimoni</a></li>
@@ -252,8 +254,18 @@
         AOS.init();
 
         function toggleSidebar() {
-            document.getElementById("sidebar").classList.toggle("show");
+            const sidebar = document.getElementById("sidebar");
+            const button = document.getElementById("hamburger-button");
+
+            sidebar.classList.toggle("show");
+
+            if (sidebar.classList.contains("show")) {
+                button.textContent = "X";
+            } else {
+                button.textContent = "☰";
+            }
         }
+
 
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
