@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Link AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <style>
     * {
@@ -44,6 +46,14 @@
         z-index: 1001;
     }
 
+    #chatIcon {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #chatIcon:hover {
+        transform: scale(1.1);
+    }
+
     section.bg-blue-500 {
         background: #00f2fe;
     }
@@ -75,17 +85,6 @@
         height: 5px;
         background: #ff0000;
         width: 0%;
-    }
-
-    #backToTop {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #00f2fe;
-        padding: 0.5rem 1rem;
-        color: white;
-        border-radius: 50px;
-        display: none;
     }
 </style>
 
@@ -127,7 +126,7 @@
     <!-- Services Section -->
     <section id="services" class="py-16 h-screen flex justify-center items-center">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8" data-aos="zoom-in" data-aos-duration="1000">Layanan Kami</h2>
+            <h2 class="text-3xl text-white font-bold mb-8" data-aos="zoom-in" data-aos-duration="1000">Layanan Kami</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded shadow-md service-card" data-aos="fade-right" data-aos-duration="1200">
                     <h3 class="text-xl font-semibold mb-4">Website Portofolio</h3>
@@ -176,9 +175,10 @@
     </section>
 
     <!-- Technologies Section -->
-    <section id="technologies" class="py-16 h-screen flex justify-center items-center bg-gray-100">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8" data-aos="zoom-in" data-aos-duration="1000">Teknologi yang Kami Gunakan
+    <section id="technologies" class="py-16 bg-blue-500 h-screen flex justify-center items-center bg-gray-100">
+        <div class="w-full mx-auto text-center">
+            <h2 class="text-3xl text-white font-bold mb-8" data-aos="zoom-in" data-aos-duration="1000">Teknologi yang
+                Kami Gunakan
             </h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div class="bg-white p-6 rounded shadow-md" data-aos="fade-up" data-aos-duration="1000">
@@ -244,13 +244,27 @@
         </div>
     </section>
 
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" onclick="scrollToTop()">↑</button>
+    <!-- Ikon Chat Mengambang -->
+    <div id="chatIcon" onclick="openChat()"
+        class="fixed bottom-4 right-4 bg-blue-500 text-white p-4 rounded-full shadow-lg cursor-pointer">
+        <i class="fas fa-comments text-2xl"></i>
+    </div>
 
     <!-- Script AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        function openChat() {
+            window.open("./chat/");
+        }
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/your-chat-id/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
         AOS.init();
 
         function toggleSidebar() {
